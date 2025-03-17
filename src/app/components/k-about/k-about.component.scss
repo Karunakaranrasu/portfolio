@@ -1,0 +1,42 @@
+.about-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  .profile-section {
+    margin-bottom: 20px;
+  }
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  .role {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  .bio {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    text-align: left;
+  }
+  .highlights {
+    margin-top: 20px;
+  }
+  .highlights h3 {
+    color: #ffcc00;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  ul li {
+    padding: 5px;
+    text-align: left;
+    font-weight: bold;
+  }

@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ff7eb3,
+    #ff758c,
+    #ff7eb3,
+    #ff758c,
+    #6a11cb,
+    #2575fc
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600; /* Bold headers */
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 300; /* Lighter text for readability */
+  line-height: 1.6;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
