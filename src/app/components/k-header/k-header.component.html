@@ -1,16 +1,53 @@
 <header>
   <div class="box">
-    <span style="
-    padding: 4px;
-">
-      &lt; RK /&gt;
-    </span>
+    <span style="padding: 4px"> &lt; RK /&gt; </span>
   </div>
-  
+
   <nav>
-    <a routerLink="/about" [class.active]="isActive('/about')">About</a>
-    <a routerLink="/skills" [class.active]="isActive('/skills')">Skills</a>
-    <a routerLink="/projects" [class.active]="isActive('/projects')">Projects</a>
-    <a routerLink="/contact" [class.active]="isActive('/contact')">Contact</a>
+    <a
+      routerLink="/about"
+      class="cross-fade"
+      [class.active]="isActive('/about')"
+      >About</a
+    >
+    <a
+      routerLink="/skills"
+      class="cross-fade"
+      [class.active]="isActive('/skills')"
+      >Skills</a
+    >
+    <a
+      routerLink="/projects"
+      class="cross-fade"
+      [class.active]="isActive('/projects')"
+      >Projects</a
+    >
+    <a
+      routerLink="/contact"
+      class="cross-fade"
+      [class.active]="isActive('/contact')"
+      >Contact</a
+    >
   </nav>
+  <div style="width: 100px">
+    <button mat-icon-button [mat-menu-trigger-for]="themeMenu">
+      <mat-icon style="color: white">{{
+        themeService.selectedTheme()?.icon
+      }}</mat-icon>
+    </button>
+    <mat-menu #themeMenu="matMenu">
+      @for (theme of themeService.getThemes(); track theme.name) {
+      <button
+        [class.selected-theme]="
+          themeService.selectedTheme()?.name === theme.name
+        "
+        mat-menu-item
+        (click)="themeService.setTheme(theme.name)"
+      >
+        <mat-icon>{{ theme.icon }}</mat-icon>
+        <span>{{ theme.name | titlecase }}</span>
+      </button>
+      }
+    </mat-menu>
+  </div>
 </header>
