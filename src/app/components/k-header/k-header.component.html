@@ -1,9 +1,16 @@
 <header>
-    <h1>R. Karunakaran</h1>
-    <nav>
-      <a routerLink="/about" routerLinkActive="active">About</a>
-      <a routerLink="/skills" routerLinkActive="active">Skills</a>
-      <a routerLink="/projects" routerLinkActive="active">Projects</a>
-      <a routerLink="/contact" routerLinkActive="active">Contact</a>
-    </nav>
-  </header>
+  <div class="box">
+    <span style="
+    padding: 4px;
+">
+      &lt; RK /&gt;
+    </span>
+  </div>
+  
+  <nav>
+    <a routerLink="/about" [class.active]="isActive('/about')">About</a>
+    <a routerLink="/skills" [class.active]="isActive('/skills')">Skills</a>
+    <a routerLink="/projects" [class.active]="isActive('/projects')">Projects</a>
+    <a routerLink="/contact" [class.active]="isActive('/contact')">Contact</a>
+  </nav>
+</header>

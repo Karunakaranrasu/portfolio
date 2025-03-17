@@ -8,6 +8,10 @@ body {
   color: white;
   font-family: Arial, sans-serif;
 }
+.parent-container {
+  height: calc(100vh - 65px); /* Adjust 100px according to your header and footer height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
 .container {
   text-align: center;
   max-width: 800px;

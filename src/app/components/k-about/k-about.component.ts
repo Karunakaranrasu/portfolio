@@ -4,10 +4,11 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material/dialog';
 import { KDialogPopupComponent } from '../../common/k-dialog-popup/k-dialog-popup.component';
 import FileSaver from 'file-saver';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-k-about',
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './k-about.component.html',
   styleUrl: './k-about.component.scss'
 })

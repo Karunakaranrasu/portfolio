@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-k-header',
@@ -8,5 +8,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './k-header.component.scss'
 })
 export class KHeaderComponent {
+  constructor(private router: Router) {}
 
+  isActive(route: string): boolean {
+    return this.router.url === route;
+  }
 }
